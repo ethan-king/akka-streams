@@ -24,9 +24,9 @@ object FirstPrinciples extends App {
   val sourceWithFlow = source.via(flow)
   val flowWithSink = flow.to(sink)
 
-  //  sourceWithFlow.to(sink).run()
-  //  source.to(flowWithSink).run()
-  //  source.via(flow).to(sink).run()
+    sourceWithFlow.to(sink).run()
+    source.to(flowWithSink).run()
+    source.via(flow).to(sink).run()
 
   // nulls are NOT allowed
   // val illegalSource = Source.single[String](null)
